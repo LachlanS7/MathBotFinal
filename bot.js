@@ -130,7 +130,7 @@ client.on('message', message => {
             message.reply("you need to be an admin for that...")
         }
     }
-	else if(message.content === '.update' || message.content === '.restart') {
+	else if(message.content === `${prefix}update` || message.content === `${prefix}restart`) {
 		if(message.member.roles.find(r => r.name === adminRole))
         {
             message.channel.send('Restarting and checking for updates...');
