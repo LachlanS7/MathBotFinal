@@ -11,8 +11,9 @@ temp = fs.readFileSync('data.json');
 let data = JSON.parse(temp);
 
 // Connecting to Discord
-client.once('ready', () => {
-    console.log('Ready!')
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.channels.get('642203217853415444').send('Hi again! I just restarted.');
 });
 
 //needs to be defined once on start up
