@@ -60,13 +60,6 @@
     "solutionAuthor": "Lachlan"
   },
   {
-    "question": "Evaluate the following limit: $\\lim_{x \\to \\infty} (x+\\frac{1}{x})^x$?",
-    "difficulty": "6",
-    "image": "http://www.sciweavers.org/upload/Tex2Img_1572142350/eqn.png",
-    "solution": "e",
-    "solutionAuthor": "Lachlan"
-  },
-  {
     "question": "Prove that sqrt(3) is irrational",
     "difficulty": "4"
   },
@@ -111,12 +104,6 @@
     "question": "What is 1 + 1",
     "difficulty": "1",
     "solution": "-2e^(ipi)",
-    "solutionAuthor": "spooky asian"
-  },
-  {
-    "question": "Solve this indefinite integral:",
-    "difficulty": "6",
-    "solution": "https://cdn.discordapp.com/attachments/616175661790527519/638703541128790019/273638495640092672.png",
     "solutionAuthor": "spooky asian"
   },
   {
