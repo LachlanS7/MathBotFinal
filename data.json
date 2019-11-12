@@ -118,5 +118,12 @@
     "difficulty": "1",
     "solution": "21",
     "solutionAuthor": "mitch"
+  },
+  {
+    "question": "Show that if z = r cis theta - r > 0 - then the distance between z and z-bar in the complex plane is 2r abs(sin theta).",
+    "difficulty": "6",
+    "image": "https://cdn.discordapp.com/attachments/616175661790527519/643620312633835521/230463415146119169.png",
+    "solution": "hint: z-bar = cis(-theta)",
+    "solutionAuthor": "mitch"
   }
 ]
