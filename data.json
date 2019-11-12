@@ -125,5 +125,35 @@
     "image": "https://cdn.discordapp.com/attachments/616175661790527519/643620312633835521/230463415146119169.png",
     "solution": "hint: z-bar = cis(-theta)",
     "solutionAuthor": "mitch"
+  },
+  {
+    "question": "A bomb explodes sending three pieces of shrapnel into three directions. One piece of mass m travels horizontally to the left with a speed of 15m/s, while the other piece has another mass of m traveling downwards at a speed of 8m/s, find the direction and speed of the third piece if it has a mass of 3m.",
+    "difficulty":"4"
+  },
+  {
+    "question": "If e^y = sin(x) for 0 < x < pi, find dy/dx.",
+    "difficulty": "7"
+  },
+  {
+    "question": "Evaluate e^(i pi / 6) where i is the square root of -1.",
+    "difficulty": "6"
+  },
+  {
+    "question": "A boat travels at 20km/hr 030T while a submarine travels at 32km/hr 187T. The submarine has a radar that can detect anything that is 5km away from it. If the sub starts at the postion (10, 4) and the boat starts at the position (1, -3) (coordinates represent the distance in km from some arbitary origin), determine if the sub will detect the boat - if so, at what time.",
+    "difficulty": "5"
+  },
+  {
+    "question": "A car is approaching a bend which is of radius 40 m. The coefficient of friction between the road and the car's tyres is 0.4. Find the maximum speed at which the car an negotiate the bend without skidding",
+    "difficulty": "4"
+  },  {
+    "question": "How many complex numbers z satisfy the relations |z-1|=1 and |z|=|z-i| simulaneously?",
+    "difficulty": "7"
+  },  {
+    "question": "Express 1+i(sqrt(3)) in polar form",
+    "difficulty": "7"
+  },  {
+    "question": "Solve for all roots of the following polynomial by hand",
+    "difficulty": "5",
+    "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
   }
 ]
