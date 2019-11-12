@@ -142,13 +142,16 @@
   {
     "question": "A car is approaching a bend which is of radius 40 m. The coefficient of friction between the road and the car's tyres is 0.4. Find the maximum speed at which the car an negotiate the bend without skidding",
     "difficulty": "4"
-  },  {
+  },
+  {
     "question": "How many complex numbers z satisfy the relations |z-1|=1 and |z|=|z-i| simulaneously?",
     "difficulty": "7"
-  },  {
+  },
+  {
     "question": "Express 1+i(sqrt(3)) in polar form",
     "difficulty": "7"
-  },  {
+  },
+  {
     "question": "Solve for all roots of the following polynomial by hand",
     "difficulty": "5",
     "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
