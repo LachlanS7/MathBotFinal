@@ -13,7 +13,7 @@ let data = JSON.parse(temp);
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.channels.get('698069945510002798').send('Hi again! I just restarted.');
+    client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
 });
 
 //needs to be defined once on start up
@@ -33,8 +33,8 @@ client.on('message', message => {
             } else {
 
             let avaliableQuestions = 0
-            for(var i = 0; i < data.length; i++){
-                if(data[i].difficulty == reqDifficulty){
+            for(var i = 0; i < data.questions.length; i++){
+                if(data.questions[i].difficulty == reqDifficulty){
                     avaliableQuestions++
                 }
             }
@@ -45,8 +45,8 @@ client.on('message', message => {
             tempcount = 0
 
             //Selecting the question
-            for(var i = 0; i < data.length && tempcount <= rand; i++ ){
-                if(data[i].difficulty == reqDifficulty){
+            for(var i = 0; i < data.questions.length && tempcount <= rand; i++ ){
+                if(data.questions[i].difficulty == reqDifficulty){
                     tempcount++;
                 }
                 if(tempcount == rand){
@@ -64,16 +64,16 @@ client.on('message', message => {
 
         }
         else {
-            choosenQuestion = Math.floor(Math.random() * (data.length - 1))
+            choosenQuestion = Math.floor(Math.random() * (data.questions.length - 1))
         }
-            // data.length - 1 is array index from 0 to x
+            // data.questions.length - 1 is array index from 0 to x
             // Access image
             if(choosenQuestion != null){
-            if(data[choosenQuestion].image && data[choosenQuestion].image != "") {
-                message.channel.send(`Question ${choosenQuestion + 1}: ${data[choosenQuestion].question}`, {files: [data[choosenQuestion].image]}) 
+            if(data.questions[choosenQuestion].image && data.questions[choosenQuestion].image != "") {
+                message.channel.send(`Question ${choosenQuestion + 1}: ${data.questions[choosenQuestion].question}`, {files: [data.questions[choosenQuestion].image]}) 
             } 
             else {
-                message.channel.send(`Question ${choosenQuestion + 1}: ${data[choosenQuestion].question}`) 
+                message.channel.send(`Question ${choosenQuestion + 1}: ${data.questions[choosenQuestion].question}`) 
             }
         } 
     }
@@ -93,13 +93,13 @@ client.on('message', message => {
         }
 
         if(isNaN(question) == false){
-            if(data[question].solution != null){
+            if(data.questions[question].solution != null){
                 //If a solution exits, the user will be directly messaged the solution
-                if(data[question].solutionAuthor) {
-                    message.author.send(`The solution to Question ${question + 1} is: ${data[question].solution} \nSolution provided by: ${data[question].solutionAuthor}`);
+                if(data.questions[question].solutionAuthor) {
+                    message.author.send(`The solution to Question ${question + 1} is: ${data.questions[question].solution} \nSolution provided by: ${data.questions[question].solutionAuthor}`);
                 }
                 else {
-                    message.author.send(`The solution to Question ${question + 1} is: ${data[question].solution}`);
+                    message.author.send(`The solution to Question ${question + 1} is: ${data.questions[question].solution}`);
                 }
                 
             } else {
@@ -122,8 +122,8 @@ client.on('message', message => {
             else {
                 let theQuestion = message.content.replace(`${prefix}addquestion`, '').split(',').map(item => item.trim())
                 let newEntry = { question: theQuestion[0], difficulty: theQuestion[1], image: theQuestion[3], solution: theQuestion[2], solutionAuthor: message.author.username}
-                data.push(newEntry)
-                fs.writeFile("data.json", JSON.stringify(data, null, 2), function() { console.log(`successfully added question: ${theQuestion[0]}`) })
+                data.questions.push(newEntry)
+                fs.writeFile("data.json", JSON.stringify(data, null, 4), function() { console.log(`successfully added question: ${theQuestion[0]}`) })
                 message.reply(`successfully added question: ${theQuestion[0]}`)
             }
         }
@@ -131,18 +131,18 @@ client.on('message', message => {
             message.reply("you need to be an admin for that...")
         }
     }
-	else if(message.content === `${prefix}update` || message.content === `${prefix}restart`) {
-		if(message.member.roles.find(r => r.name === adminRole))
-        {
+    else if(message.content === `${prefix}update` || message.content === `${prefix}restart`) {
+        if(message.member.roles.find(r => r.name === adminRole)) {
             message.channel.send('Restarting and checking for updates...');
-			setTimeout(function(){ shell.exec('./update.sh'); message.channel.send('Failed to restart!'); }, 1000);
+            data.restartChannel = message.channel.id;
+            fs.writeFileSync('data.json', JSON.stringify(data, null, 4));
+	    setTimeout(function(){ shell.exec('./update.sh'); message.channel.send('Failed to restart!'); }, 1000);
         }
         else {
             message.reply("you need to be an admin for that...")
         }
-	}
+    }
 });
-    
 
 let token = fs.readFileSync('token.txt');
 client.login(String(token).replace(`\n`, ""));

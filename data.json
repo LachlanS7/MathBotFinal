@@ -1,162 +1,165 @@
-[
-  {
-    "question": "What is the limit of (1+1/x)^x as x approches infinity?",
-    "difficulty": "5",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638375100290170893/419779991308468224.png",
-    "solution": "e, 2.718...",
-    "soltuionImage": false,
-    "solutionAuthor": "Lachlan"
-  },
-  {
-    "question": "Prove the derivative of sin(x)",
-    "difficulty": "5",
-    "solution": "cos(x)",
-    "soltuionImage": false,
-    "solutionAuthor": "Lachlan"
-  },
-  {
-    "question": "What is the limit as x approches inifity of sqrt(x^3 - 1)/x^2?",
-    "difficulty": "5",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638381926217941012/419779991308468224.png"
-  },
-  {
-    "question": "Prove Euler's Identity",
-    "difficulty": "7",
-    "image": false,
-    "solution": "0",
-    "soltuionImage": false,
-    "solutionAuthor": null
-  },
-  {
-    "question": "find the indefinite integral of sec(x) with respect to x",
-    "difficulty": "6",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638376048630825010/419779991308468224.png",
-    "solution": "https://wikimedia.org/api/rest_v1/media/math/render/svg/2ad1efad0651cace06a0dce422ca66077fd3af04",
-    "soltuionImage": false,
-    "solutionAuthor": "mitch"
-  },
-  {
-    "question": "find the indefinite integral of e^x log x",
-    "difficulty": "7",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638377143222403075/419779991308468224.png",
-    "soltuionImage": false
-  },
-  {
-    "question": "Evaluate the integral (t^3-1)/ln(t) dt from 0 to 1",
-    "difficulty": "9",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638377709608763392/419779991308468224.png",
-    "solution": "ln(4), https://cdn.discordapp.com/attachments/616197146374569987/638378035992854529/419779991308468224.png",
-    "solutionAuthor": "Lachlan"
-  },
-  {
-    "question": "There is an initial population of 300,000 people, and 4,600 of those people are infected with a curable disease. Every year, exactly at the same time for everyone, the cure takes effect, but it only works 12% of the time. Furthermore, 8% of those who are healthy will become sick and 2% of the population will give birth (let us assume there is no age or sex) – the birth will occur just before the other actions, so if someone is born they could become sick immediately after. Will there be a time at which the ratio of healthy people to sick people remains constant, if so, what is this ratio? ",
-    "difficulty": "10"
-  },
-  {
-    "question": "What is i to the power of i, where i is the imaginary number sqrt(-1)?",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638380904615510016/419779991308468224.png",
-    "difficulty": "6",
-    "solution": "https://cdn.discordapp.com/attachments/616197146374569987/638381129157836800/419779991308468224.png",
-    "solutionAuthor": "Lachlan"
-  },
-  {
-    "question": "Prove that sqrt(3) is irrational",
-    "difficulty": "4"
-  },
-  {
-    "question": "Find and prove the equation for the sum of the first n integers?",
-    "difficulty": "4"
-  },
-  {
-    "question": "Evaluate the following limit: $\\lim_{x \\to \\infty} (x+\\frac{1}{x})^x$?",
-    "difficulty": "6",
-    "image": "http://www.sciweavers.org/upload/Tex2Img_1572142350/eqn.png",
-    "solution": "e",
-    "solutionAuthor": "Lachlan"
-  },
-  {
-    "question": "What is the integral of (x^3)(sinx)",
-    "difficulty": "6",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638685801785327637/419779991308468224.png",
-    "solution": "https://cdn.discordapp.com/attachments/616175661790527519/638688089640009738/419779991308468224.png",
-    "solutionAuthor": "Beano"
-  },
-  {
-    "question": "Solve the following infinite series",
-    "difficulty": "5",
-    "image": "https://cdn.discordapp.com/attachments/616197146374569987/638686444067618816/419779991308468224.png",
-    "solution": "X is equal to the golden ration. https://www.youtube.com/watch?v=QAMXSU40ZgA"
-  },
-  {
-    "question": "Solve this definite integral. The first 10 digits is the wifi password ;)",
-    "difficulty": "7",
-    "image": "(https://cdn.discordapp.com/attachments/616175661790527519/638698383447425034/419779991308468224.png)",
-    "solution": "(π)",
-    "solutionAuthor": "spooky asian"
-  },
-  {
-    "question": "$$y=\\frac{dy}{dx}+\\frac{d^{2}y}{dx^{2}}+\\frac{d^{3}y}{dx^{3}}+...$$",
-    "difficulty": "7",
-    "solution": "$$y=Ce^{\\frac{x}{2}}$$",
-    "solutionAuthor": "Beano"
-  },
-  {
-    "question": "What is 1 + 1",
-    "difficulty": "1",
-    "solution": "-2e^(ipi)",
-    "solutionAuthor": "spooky asian"
-  },
-  {
-    "question": "Solve this indefinite integral:",
-    "difficulty": "6",
-    "image": "https://cdn.discordapp.com/attachments/616175661790527519/638703541128790019/273638495640092672.png",
-    "solution": "https://cdn.discordapp.com/attachments/616175661790527519/638704763940372480/273638495640092672.png",
-    "solutionAuthor": "spooky asian"
-  },
-  {
-    "question": "what is 9 + 10",
-    "difficulty": "1",
-    "solution": "21",
-    "solutionAuthor": "mitch"
-  },
-  {
-    "question": "Show that if z = r cis theta - r > 0 - then the distance between z and z-bar in the complex plane is 2r abs(sin theta).",
-    "difficulty": "6",
-    "image": "https://cdn.discordapp.com/attachments/616175661790527519/643620312633835521/230463415146119169.png",
-    "solution": "hint: z-bar = cis(-theta)",
-    "solutionAuthor": "mitch"
-  },
-  {
-    "question": "A bomb explodes sending three pieces of shrapnel into three directions. One piece of mass m travels horizontally to the left with a speed of 15m/s, while the other piece has another mass of m traveling downwards at a speed of 8m/s, find the direction and speed of the third piece if it has a mass of 3m.",
-    "difficulty":"4"
-  },
-  {
-    "question": "If e^y = sin(x) for 0 < x < pi, find dy/dx.",
-    "difficulty": "7"
-  },
-  {
-    "question": "Evaluate e^(i pi / 6) where i is the square root of -1.",
-    "difficulty": "6"
-  },
-  {
-    "question": "A boat travels at 20km/hr 030T while a submarine travels at 32km/hr 187T. The submarine has a radar that can detect anything that is 5km away from it. If the sub starts at the postion (10, 4) and the boat starts at the position (1, -3) (coordinates represent the distance in km from some arbitary origin), determine if the sub will detect the boat - if so, at what time.",
-    "difficulty": "5"
-  },
-  {
-    "question": "A car is approaching a bend which is of radius 40 m. The coefficient of friction between the road and the car's tyres is 0.4. Find the maximum speed at which the car an negotiate the bend without skidding",
-    "difficulty": "4"
-  },
-  {
-    "question": "How many complex numbers z satisfy the relations |z-1|=1 and |z|=|z-i| simulaneously?",
-    "difficulty": "7"
-  },
-  {
-    "question": "Express 1+i(sqrt(3)) in polar form",
-    "difficulty": "7"
-  },
-  {
-    "question": "Solve for all roots of the following polynomial by hand",
-    "difficulty": "5",
-    "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
-  }
-]
+{
+    "restartChannel": "694490146128789545",
+    "questions": [
+        {
+            "question": "What is the limit of (1+1/x)^x as x approches infinity?",
+            "difficulty": "5",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638375100290170893/419779991308468224.png",
+            "solution": "e, 2.718...",
+            "soltuionImage": false,
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "Prove the derivative of sin(x)",
+            "difficulty": "5",
+            "solution": "cos(x)",
+            "soltuionImage": false,
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "What is the limit as x approches inifity of sqrt(x^3 - 1)/x^2?",
+            "difficulty": "5",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638381926217941012/419779991308468224.png"
+        },
+        {
+            "question": "Prove Euler's Identity",
+            "difficulty": "7",
+            "image": false,
+            "solution": "0",
+            "soltuionImage": false,
+            "solutionAuthor": null
+        },
+        {
+            "question": "find the indefinite integral of sec(x) with respect to x",
+            "difficulty": "6",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638376048630825010/419779991308468224.png",
+            "solution": "https://wikimedia.org/api/rest_v1/media/math/render/svg/2ad1efad0651cace06a0dce422ca66077fd3af04",
+            "soltuionImage": false,
+            "solutionAuthor": "mitch"
+        },
+        {
+            "question": "find the indefinite integral of e^x log x",
+            "difficulty": "7",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638377143222403075/419779991308468224.png",
+            "soltuionImage": false
+        },
+        {
+            "question": "Evaluate the integral (t^3-1)/ln(t) dt from 0 to 1",
+            "difficulty": "9",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638377709608763392/419779991308468224.png",
+            "solution": "ln(4), https://cdn.discordapp.com/attachments/616197146374569987/638378035992854529/419779991308468224.png",
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "There is an initial population of 300,000 people, and 4,600 of those people are infected with a curable disease. Every year, exactly at the same time for everyone, the cure takes effect, but it only works 12% of the time. Furthermore, 8% of those who are healthy will become sick and 2% of the population will give birth (let us assume there is no age or sex) – the birth will occur just before the other actions, so if someone is born they could become sick immediately after. Will there be a time at which the ratio of healthy people to sick people remains constant, if so, what is this ratio? ",
+            "difficulty": "10"
+        },
+        {
+            "question": "What is i to the power of i, where i is the imaginary number sqrt(-1)?",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638380904615510016/419779991308468224.png",
+            "difficulty": "6",
+            "solution": "https://cdn.discordapp.com/attachments/616197146374569987/638381129157836800/419779991308468224.png",
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "Prove that sqrt(3) is irrational",
+            "difficulty": "4"
+        },
+        {
+            "question": "Find and prove the equation for the sum of the first n integers?",
+            "difficulty": "4"
+        },
+        {
+            "question": "Evaluate the following limit: $\\lim_{x \\to \\infty} (x+\\frac{1}{x})^x$?",
+            "difficulty": "6",
+            "image": "http://www.sciweavers.org/upload/Tex2Img_1572142350/eqn.png",
+            "solution": "e",
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "What is the integral of (x^3)(sinx)",
+            "difficulty": "6",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638685801785327637/419779991308468224.png",
+            "solution": "https://cdn.discordapp.com/attachments/616175661790527519/638688089640009738/419779991308468224.png",
+            "solutionAuthor": "Beano"
+        },
+        {
+            "question": "Solve the following infinite series",
+            "difficulty": "5",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638686444067618816/419779991308468224.png",
+            "solution": "X is equal to the golden ration. https://www.youtube.com/watch?v=QAMXSU40ZgA"
+        },
+        {
+            "question": "Solve this definite integral. The first 10 digits is the wifi password ;)",
+            "difficulty": "7",
+            "image": "(https://cdn.discordapp.com/attachments/616175661790527519/638698383447425034/419779991308468224.png)",
+            "solution": "(π)",
+            "solutionAuthor": "spooky asian"
+        },
+        {
+            "question": "$$y=\\frac{dy}{dx}+\\frac{d^{2}y}{dx^{2}}+\\frac{d^{3}y}{dx^{3}}+...$$",
+            "difficulty": "7",
+            "solution": "$$y=Ce^{\\frac{x}{2}}$$",
+            "solutionAuthor": "Beano"
+        },
+        {
+            "question": "What is 1 + 1",
+            "difficulty": "1",
+            "solution": "-2e^(ipi)",
+            "solutionAuthor": "spooky asian"
+        },
+        {
+            "question": "Solve this indefinite integral:",
+            "difficulty": "6",
+            "image": "https://cdn.discordapp.com/attachments/616175661790527519/638703541128790019/273638495640092672.png",
+            "solution": "https://cdn.discordapp.com/attachments/616175661790527519/638704763940372480/273638495640092672.png",
+            "solutionAuthor": "spooky asian"
+        },
+        {
+            "question": "what is 9 + 10",
+            "difficulty": "1",
+            "solution": "21",
+            "solutionAuthor": "mitch"
+        },
+        {
+            "question": "Show that if z = r cis theta - r > 0 - then the distance between z and z-bar in the complex plane is 2r abs(sin theta).",
+            "difficulty": "6",
+            "image": "https://cdn.discordapp.com/attachments/616175661790527519/643620312633835521/230463415146119169.png",
+            "solution": "hint: z-bar = cis(-theta)",
+            "solutionAuthor": "mitch"
+        },
+        {
+            "question": "A bomb explodes sending three pieces of shrapnel into three directions. One piece of mass m travels horizontally to the left with a speed of 15m/s, while the other piece has another mass of m traveling downwards at a speed of 8m/s, find the direction and speed of the third piece if it has a mass of 3m.",
+            "difficulty": "4"
+        },
+        {
+            "question": "If e^y = sin(x) for 0 < x < pi, find dy/dx.",
+            "difficulty": "7"
+        },
+        {
+            "question": "Evaluate e^(i pi / 6) where i is the square root of -1.",
+            "difficulty": "6"
+        },
+        {
+            "question": "A boat travels at 20km/hr 030T while a submarine travels at 32km/hr 187T. The submarine has a radar that can detect anything that is 5km away from it. If the sub starts at the postion (10, 4) and the boat starts at the position (1, -3) (coordinates represent the distance in km from some arbitary origin), determine if the sub will detect the boat - if so, at what time.",
+            "difficulty": "5"
+        },
+        {
+            "question": "A car is approaching a bend which is of radius 40 m. The coefficient of friction between the road and the car's tyres is 0.4. Find the maximum speed at which the car an negotiate the bend without skidding",
+            "difficulty": "4"
+        },
+        {
+            "question": "How many complex numbers z satisfy the relations |z-1|=1 and |z|=|z-i| simulaneously?",
+            "difficulty": "7"
+        },
+        {
+            "question": "Express 1+i(sqrt(3)) in polar form",
+            "difficulty": "7"
+        },
+        {
+            "question": "Solve for all roots of the following polynomial by hand",
+            "difficulty": "5",
+            "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
+        }
+    ]
+}
