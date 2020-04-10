@@ -13,7 +13,7 @@ let data = JSON.parse(temp);
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.channels.get('642203217853415444').send('Hi again! I just restarted.');
+    client.channels.get('698020695208361986').send('Hi again! I just restarted.');
 });
 
 //needs to be defined once on start up
