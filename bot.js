@@ -162,9 +162,9 @@ client.on('message', message => {
         }
     } else if(message.content.startsWith(`${prefix}notes`)){
         if(message.content.split(" ").length==2){
-            for (var i = 0; i < data.notes.length; i++) {
-            if (data.notes[i].topic == message.content.split(" ")[1]) {message.author.send(`${data.notes[i].topic}: ${data.notes[i].image}`)}
-            if (i == data.notes.length - 1) {message.reply(`There are no notes on ${message.content.split(" ")[1]}`)}
+            for (var i = 0, j = false; i < data.notes.length; i++) {
+            if (data.notes[i].topic == message.content.split(" ")[1]) {message.author.send(`${data.notes[i].topic}: ${data.notes[i].image}`); j = true;}
+            if (i == data.notes.length - 1 && !j) {message.reply(`There are no notes on ${message.content.split(" ")[1]}`)}
             }
         }
         else if(message.content.split(" ").length == 1) {
