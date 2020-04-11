@@ -11,17 +11,15 @@ client.login(String(token).replace('\n', ''));
 
 // Needs to be defined globally
 chosenQuestion = null;
-let data;
-let dailyQuestionNumber;
+
+// Loading data
+let data = JSON.parse(fs.readFileSync('data.json'));
+let dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
-
-    // Loading data
-    data = JSON.parse(fs.readFileSync('data.json'))
-    dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
     setInterval(() => {
         //Daily Questions
