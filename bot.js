@@ -168,13 +168,11 @@ client.on('message', message => {
             }
         }
         else if(message.content.split(" ").length == 1) {
-            let notelist = ""
+            let notelist = ``
             for (var i = 0; i < data.notes.length; i++) {
                 notelist += `${data.notes[i].topic},`
             }
-            notelist -= `,`
-            message.reply(`There are notes on ${notelist}`)
-            
+            message.reply(`There are notes on ${notelist}`)  
         }
     }
 });
