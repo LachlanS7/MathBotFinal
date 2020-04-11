@@ -10,13 +10,13 @@ try {
     // Obtaning data from data.json
     temp = fs.readFileSync('data.json');
     let data = JSON.parse(temp);
-
+    dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
+    
     // Connecting to Discord
     client.on('ready', () => {
         console.log(`Logged in as ${client.user.tag}!`);
         client.channels.get('698417392526688296').send(`Logged in as ${client.user.tag}!`);
         client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
-        dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
         setInterval(() => {
             //Daily Questions
@@ -26,7 +26,6 @@ try {
                 dailyQuestionNumber++;
             }
         }, 120000);
-
     });
 
     // needs to be defined globally
