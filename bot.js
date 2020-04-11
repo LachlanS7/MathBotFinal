@@ -37,13 +37,14 @@ client.on('message', message => {
         chosenQuestion = null
 
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
-            if(message.content.split(" ")[2] != ''){
-                reqDifficulty = message.content.split(" ")[1];
+            // Selecting difficulty
+            if(message.content.split(" ")[2] != '' && message.content.split(" ")[1] == 'd'){
+                reqDifficulty = message.content.split(" ")[2];
             }
             
-            // Selecting difficulty
+            // Selecting question
             else if(message.content.split(" ")[2] == ''  && isNaN(message.content.split(" ")[1])){
-                chosenQuestion = parseInt(message.content.split(" ")[2]);
+                chosenQuestion = message.content.split(" ")[2];
                 message.channel.send(`test`)
             }        
 
