@@ -52,8 +52,14 @@ client.on('message', message => {
         chosenQuestion = null
 
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
+            if(message.content.split(" ")[2] != '' && isNaN(message.content.split(" ")[2])){
+                reqDifficulty = message.content.split(" ")[1];
+            }
+            
             // Selecting difficulty
-            reqDifficulty = message.content.split(" ")[1];
+            else if(message.content.split(" ")[2] == ''){
+                chosenQuestion = parseInt(message.content.split(" ")[2]);
+            }        
 
             if (isNaN(reqDifficulty) == true) {
                 message.reply(`Please enter a positive integer`);
