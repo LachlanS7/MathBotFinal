@@ -16,7 +16,7 @@ function log(message) {
 // Error handling
 process.on('uncaughtException', (err) => {
     try {
-        log(err.message);
+        log(err);
     } catch (error) {
         console.log(error);
     }
