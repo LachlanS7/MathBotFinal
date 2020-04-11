@@ -58,7 +58,7 @@ client.on('message', message => {
 
                 //if no questions exist of reqdifficulty
                 else {
-                    message.reply(`there are no questions with difficulty`)
+                    message.reply('there are no questions with that difficulty');
                 }
             }
 
