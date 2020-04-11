@@ -11,7 +11,7 @@ try {
     temp = fs.readFileSync('data.json');
     let data = JSON.parse(temp);
     dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
-    
+
     // Connecting to Discord
     client.on('ready', () => {
         console.log(`Logged in as ${client.user.tag}!`);
@@ -20,6 +20,12 @@ try {
 
         setInterval(() => {
             //Daily Questions
+
+            if(data.dailyQuestions[dailyQuestionNumber] = null) {
+                client.channel.get('694490146128789545').send(`Need more daily questions!`)
+                dailyQuestionNumber = 0;
+            }
+
             time = new Date();
             if(time.getHours() == 16){ //that is 12:00, midday
                 client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[dailyQuestionNumber].question}`); 
