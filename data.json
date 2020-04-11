@@ -9,7 +9,7 @@
             "solution": "e, 2.718...",
             "soltuionImage": false,
             "solutionAuthor": "Lachlan"
-        }, 
+        },
         {
             "question": "What is the limit of (1+1/x)^x as x approches infinity?",
             "difficulty": "5",
