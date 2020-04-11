@@ -20,7 +20,6 @@ client.on('ready', () => {
     var i = 0;
 
     if(time.getUTCHours()==5){ //that is 12:00, midday
-        client.channels.get('698306874986070046').send(`Test`);
         if (i == 0){
             client.channels.get('698306874986070046').send(`${time.getUTCDate()}/${time.getUTCMonth()}`);
             client.channels.get('698306874986070046').send(`${data.dailyQuestions[0].question}`); 

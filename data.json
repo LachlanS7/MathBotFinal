@@ -2,7 +2,7 @@
     "restartChannel": "698306874986070046",
     "dailyQuestions": [
         {
-            "question": "Test",
+            "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained.",
             "difficulty": "5",
             "image": "https://cdn.discordapp.com/attachments/616197146374569987/638375100290170893/419779991308468224.png",
             "solution": "e, 2.718...",
