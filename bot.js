@@ -172,7 +172,7 @@ client.on('message', message => {
             for (var i = 0; i < data.notes.length; i++) {
                 notelist += ` ${data.notes[i].topic},`
             }
-            notelist = notelist.substring(1,notelist.length-2); notelist+=`.`
+            notelist = notelist.substring(1,notelist.length-1); notelist+=`.`
             message.reply(`There are notes on ${notelist}`)  
         }
     }
