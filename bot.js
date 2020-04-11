@@ -43,8 +43,8 @@ client.on('message', message => {
             }
             
             // Selecting question
-            else if(message.content.split(" ")[2] == ''  && isNaN(message.content.split(" ")[1])){
-                chosenQuestion = message.content.split(" ")[2];
+            else if(message.content.split(" ")[2] == ''  && !isNaN(message.content.split(" ")[1])){
+                chosenQuestion = message.content.split(" ")[1];
                 message.channel.send(`test`)
             }        
 
