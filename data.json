@@ -1,5 +1,17 @@
 {
     "restartChannel": "698306874986070046",
+
+    "dailyQuestions": [
+        {
+            "question": "Test",
+            "difficulty": "5",
+            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638375100290170893/419779991308468224.png",
+            "solution": "e, 2.718...",
+            "soltuionImage": false,
+            "solutionAuthor": "Lachlan"
+        }  
+    ],
+    
     "questions": [
         {
             "question": "What is the limit of (1+1/x)^x as x approches infinity?",

@@ -15,18 +15,18 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
 
-//Daily Questions
-time = new Date();
-var i = 0;
+    //Daily Questions
+    time = new Date();
+    var i = 0;
 
-if(time.getUTCHours()==5){ //that is 12:00, midday
-    client.channels.get('698306874986070046').send(`Test`);
-    if (i == 0){
-        client.channels.get('698306874986070046').send(`${time.getUTCDate()}/${time.getUTCMonth()}`);
-        client.channels.get('698306874986070046').send(`${JSON.parse(fs.readFileSync('dailyQuestions.json'))[0].question}`); 
-        i++;
-    }
-} else {i=0;}
+    if(time.getUTCHours()==5){ //that is 12:00, midday
+        client.channels.get('698306874986070046').send(`Test`);
+        if (i == 0){
+            client.channels.get('698306874986070046').send(`${time.getUTCDate()}/${time.getUTCMonth()}`);
+            client.channels.get('698306874986070046').send(`${data.dailyQuestions[0].question}`); 
+            i++;
+        }
+    } else {i=0;}
 
 });
 
