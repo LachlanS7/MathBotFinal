@@ -20,15 +20,13 @@ client.on('ready', () => {
         time = new Date();
         var i = 0;
         
-        client.channels.get('698306874986070046').send(time.getSeconds());
-
         if(time.getHours() == 12 && time.getMinutes() == 0){ //that is 12:00, midday
             if (i == 0){
                 client.channels.get('698306874986070046').send(`${time.getDate()+1}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
                 i++;
             }
         } else {i = 0;}
-    }, 1000);
+    }, 60000);
 });
 
 // needs to be defined globally
