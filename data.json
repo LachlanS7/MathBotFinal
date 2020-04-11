@@ -1,6 +1,12 @@
 {
     "restartChannel": "638674385892409356",
     "dailyQuestionNumber": 0,
+    "notes": [
+        {
+            "topic": "trig",
+            "image": "https://sites.google.com/site/trigridgestyle/_/rsrc/1478489329538/home/table-of-contents/chapter-5-lessons/lesson-1-trigonometric-identities/Screen%20Shot%202016-11-06%20at%209.24.34%20PM.png"
+        }
+    ],
     "dailyQuestions": [
         {
             "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained.",
