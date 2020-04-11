@@ -1,6 +1,10 @@
 {
     "restartChannel": "698306874986070046",
+<<<<<<< HEAD
     "dailyQuestionNumber": 3,
+=======
+    "dailyQuestionNumber": 0,
+>>>>>>> cb167352834e0376bd5357e43df96b3014f53f7f
     "dailyQuestions": [
         {
             "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained.",
