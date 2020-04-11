@@ -10,7 +10,6 @@ try {
     // Obtaning data from data.json
     temp = fs.readFileSync('data.json');
     let data = JSON.parse(temp);
-    let dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
     // Connecting to Discord
     client.on('ready', () => {
