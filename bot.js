@@ -77,7 +77,6 @@ client.on('message', message => {
                 }
             }
 
-        }
         else {
             chosenQuestion = Math.floor(Math.random() * (data.questions.length - 1))
         }
@@ -91,6 +90,7 @@ client.on('message', message => {
                 message.channel.send(`Question ${chosenQuestion + 1}: ${data.questions[chosenQuestion].question}`)
             }
         }
+    }
 
     // Discord Command !solution
     else if (message.content.startsWith(`${prefix}solution`)) {
