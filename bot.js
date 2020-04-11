@@ -157,8 +157,8 @@ var i = 0;
 
 if(time.getUTCHours()==4){ //that is 12:00, midday
     if (i == 0){
-        client.channels.get(698306874986070046).send(`${time.getUTCDate()}/${time.getUTCMonth()}`);
-        client.channels.get(698306874986070046).send(`${JSON.parse(fs.readFileSync('dailyQuestions.json'))[0].question}`); 
+        client.channels.get('698306874986070046').send(`${time.getUTCDate()}/${time.getUTCMonth()}`);
+        client.channels.get('698306874986070046').send(`${JSON.parse(fs.readFileSync('dailyQuestions.json'))[0].question}`); 
         i++;
     }
 } else {i=0;}
