@@ -10,16 +10,20 @@ const shell = require('shelljs'); // interact with the OS's shell
 temp = fs.readFileSync('data.json');
 let data = JSON.parse(temp);
 
+dailyQuestionNumber;
+
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
 
     setInterval(() => {
         //Daily Questions
         time = new Date();
         if(time.getHours() == 12 && time.getMinutes() == 0){ //that is 12:00, midday
-            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
+            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[dailyQuestionNumber].question}`); 
+            dailyQuestionNumber++;
         }
     }, 60000);
 });
