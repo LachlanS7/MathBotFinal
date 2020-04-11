@@ -9,31 +9,17 @@ const shell = require('shelljs'); // interact with the OS's shell
 let token = fs.readFileSync('token.txt');
 client.login(String(token).replace('\n', ''));
 
-function log(message) {
-    client.channels.get('698417392526688296').send(message);
-}
-
-// Error handling
-process.on('uncaughtException', (err) => {
-    try {
-        log(err);
-    } catch (error) {
-        console.log(error);
-    }
-})
-
-// needs to be defined globally
+// Needs to be defined globally
 chosenQuestion = null;
-
 let data;
 let dailyQuestionNumber;
 
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    log(`Logged in as ${client.user.tag}!`);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
 
+    // Loading data
     data = JSON.parse(fs.readFileSync('data.json'))
     dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
