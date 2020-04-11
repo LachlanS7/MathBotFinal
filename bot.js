@@ -38,15 +38,16 @@ client.on('message', message => {
 
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
             // Selecting difficulty
-            if(message.content.split(" ")[2] != '' && message.content.split(" ")[1] == 'd'){
-                if(!isNaN(message.client.split(" ")[2])){ reqDifficulty = message.client.split(" ")[2]; }    
-                else {message.reply(`Please enter a positive integer`); }    
+            if(message.content.split(" ").length = 3 && message.content.split(" ")[1] == 'd'){
+                if(!isNaN(message.content.split(" ")[2])){ reqDifficulty = message.content.split(" ")[2]; }    
+                else {message.reply(`Please enter a positive integer aaaa`); }    
             }
-            if(message.content.split(" ")[2] == ''){
-                if(!isNaN(message.content.split(" ")[1])){ chosenQuestion = message.content.split(" ")[1]; }
+            // Selecting question
+            if(message.content.split(" ").length == 2){
+                if(!isNaN(message.content.split(" ")[1])){ chosenQuestion = message.content.split(" ")[1]-1; }
                 else{ message.reply(`Please enter a positive integer`); }
             }
-
+            if(reqDifficulty != isNaN){
                 let avaliableQuestions = 0
                 for (var i = 0; i < data.questions.length; i++) {
                     if (data.questions[i].difficulty == reqDifficulty) {
@@ -70,9 +71,10 @@ client.on('message', message => {
                         }
                     }
                 }
+            }
 
                 //if no questions exist of reqdifficulty
-                else {
+                if (isNaN(chosenQuestion)) {
                     message.reply('there are no questions with that difficulty');
                 }
             }
