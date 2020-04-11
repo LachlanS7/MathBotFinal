@@ -1,6 +1,5 @@
 {
     "restartChannel": "698306874986070046",
-
     "dailyQuestions": [
         {
             "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained.",
@@ -9,9 +8,8 @@
             "solution": "e, 2.718...",
             "soltuionImage": false,
             "solutionAuthor": "Lachlan"
-        }  
+        }
     ],
-    
     "questions": [
         {
             "question": "What is the limit of (1+1/x)^x as x approches infinity?",
