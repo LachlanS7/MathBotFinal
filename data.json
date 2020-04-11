@@ -160,20 +160,6 @@
             "question": "Solve for all roots of the following polynomial by hand",
             "difficulty": "5",
             "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
-        },
-        {
-            "question": "Test",
-            "difficulty": "5.5",
-            "image": "https://i.imgur.com/VTcqgOy.png",
-            "solution": "Yes",
-            "solutionAuthor": "Lachlan"
-        },
-        {
-            "question": "Test",
-            "difficulty": "10",
-            "image": "https://i.imgur.com/VTcqgOy.png",
-            "solution": "Yes",
-            "solutionAuthor": "Lachlan"
         }
     ]
 }
