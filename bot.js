@@ -10,12 +10,14 @@ const shell = require('shelljs'); // interact with the OS's shell
 temp = fs.readFileSync('data.json');
 let data = JSON.parse(temp);
 
+let dailyQuestionsTimer;
+
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
 
-    setTimeout(() => {
+    dailyQuestionsTimer = setTimeout(() => {
         //Daily Questions
         time = new Date();
         var i = 0;
