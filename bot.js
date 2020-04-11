@@ -121,9 +121,22 @@ client.on('message', message => {
             else {
                 let theQuestion = message.content.replace(`${prefix}addquestion`, '').split(',').map(item => item.trim())
                 let newEntry = { question: theQuestion[0], difficulty: theQuestion[1], image: theQuestion[3], solution: theQuestion[2], solutionAuthor: message.author.username }
-                data.questions.push(newEntry)
-                fs.writeFile("data.json", JSON.stringify(data, null, 4), function () { console.log(`successfully added question: ${theQuestion[0]}`) })
-                message.reply(`successfully added question: ${theQuestion[0]}`)
+                let validName = true;
+
+                for (var i = 0; i < data.questions.length; i++) {
+                    if (data.questions[i].question == newEntry.question) {
+                        validName = false;
+                    }
+                }
+
+                if (validName) {
+                    data.questions.push(newEntry)
+                    fs.writeFile("data.json", JSON.stringify(data, null, 4), function () { console.log(`successfully added question: ${theQuestion[0]}`) })
+                    message.reply(`successfully added question: ${theQuestion[0]}`);
+                }
+                else {
+                    message.reply("that question already exists...");
+                }
             }
         }
         else {
