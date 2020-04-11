@@ -15,7 +15,7 @@ dailyQuestionNumber;
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    
+    dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
 
     setInterval(() => {
@@ -152,6 +152,7 @@ client.on('message', message => {
         if (message.member.roles.find(r => r.name === adminRole)) {
             message.channel.send('Restarting and checking for updates...');
             data.restartChannel = message.channel.id;
+            data.dailyQuestionNumber = dailyQuestionNumber;
             fs.writeFileSync('data.json', JSON.stringify(data, null, 4));
             shell.exec('./update.sh'); // This script should eventually stop the bot, so the below line is not run
             message.channel.send('Failed to restart!');
