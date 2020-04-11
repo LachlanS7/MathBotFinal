@@ -186,6 +186,13 @@
             "question": "Solve for all roots of the following polynomial by hand",
             "difficulty": "5",
             "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
+        },
+        {
+            "question": "Was Euler a legend?",
+            "difficulty": "100",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg",
+            "solution": "Of course",
+            "solutionAuthor": "Lachlan"
         }
     ]
 }
