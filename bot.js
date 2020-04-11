@@ -22,7 +22,7 @@ client.on('ready', () => {
         
         if(time.getHours() == 15 && time.getMinutes() == 42){ //that is 12:00, midday
             if (i == 0){
-                client.channels.get('698306874986070046').send(`${time.getDate()+1}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
+                client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
                 i++;
             }
         } else {i = 0;}
