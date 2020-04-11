@@ -141,7 +141,8 @@ client.on('message', message => {
             message.channel.send('Restarting and checking for updates...');
             data.restartChannel = message.channel.id;
             fs.writeFileSync('data.json', JSON.stringify(data, null, 4));
-            setTimeout(function () { shell.exec('./update.sh'); message.channel.send('Failed to restart!'); }, 1000);
+            shell.exec('./update.sh'); // This script should eventually stop the bot, so the below line is not run
+            message.channel.send('Failed to restart!');
         }
         else {
             message.reply("you need to be an admin for that...")
