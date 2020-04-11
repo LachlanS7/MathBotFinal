@@ -1,5 +1,5 @@
 {
-    "restartChannel": "697711274468835458",
+    "restartChannel": "694490146128789545",
     "questions": [
         {
             "question": "What is the limit of (1+1/x)^x as x approches infinity?",
@@ -160,6 +160,20 @@
             "question": "Solve for all roots of the following polynomial by hand",
             "difficulty": "5",
             "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
+        },
+        {
+            "question": "Test",
+            "difficulty": "5.5",
+            "image": "https://i.imgur.com/VTcqgOy.png",
+            "solution": "Yes",
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "Test",
+            "difficulty": "10",
+            "image": "https://i.imgur.com/VTcqgOy.png",
+            "solution": "Yes",
+            "solutionAuthor": "Lachlan"
         }
     ]
 }
