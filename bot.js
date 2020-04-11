@@ -21,11 +21,11 @@ try {
         setInterval(() => {
             //Daily Questions
             time = new Date();
-            if(time.getHours() == 12 && time.getMinutes() == 0){ //that is 12:00, midday
+            if(time.getHours() == 12){ //that is 12:00, midday
                 client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[dailyQuestionNumber].question}`); 
                 dailyQuestionNumber++;
             }
-        }, 60000);
+        }, 120000);
     });
 
     // needs to be defined globally
