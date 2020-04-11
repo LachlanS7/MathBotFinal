@@ -34,8 +34,8 @@ client.on('ready', () => {
 client.on('message', message => {
     // Discord Command !question.
     if (message.content.startsWith(`${prefix}question`)) {
-        chosenQuestion = null
-
+        chosenQuestion = null; reqDifficulty = null; chosenQuestion = null
+        
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
             // Selecting difficulty
             if(message.content.split(" ")[2] != '' && message.content.split(" ")[1] == 'd'){
