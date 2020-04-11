@@ -10,23 +10,23 @@ try {
     // Obtaning data from data.json
     temp = fs.readFileSync('data.json');
     let data = JSON.parse(temp);
-    let dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
     // Connecting to Discord
     client.on('ready', () => {
         console.log(`Logged in as ${client.user.tag}!`);
         client.channels.get('698417392526688296').send(`Logged in as ${client.user.tag}!`);
         client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
-
-        setInterval(() => {
-            //Daily Questions
-            time = new Date();
-            if(time.getHours() == 4){ //that is 12:00, midday
-                client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[dailyQuestionNumber].question}`); 
-                dailyQuestionNumber++;
-            }
-        }, 120000);
+        dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
     });
+
+    setInterval(() => {
+        //Daily Questions
+        time = new Date();
+        if(time.getHours() == 4){ //that is 12:00, midday
+            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[dailyQuestionNumber].question}`); 
+            dailyQuestionNumber++;
+        }
+    }, 120000);
 
     // needs to be defined globally
     chosenQuestion = null;
