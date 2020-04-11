@@ -46,7 +46,7 @@ client.on('message', message => {
                 if(!isNaN(message.content.split(" ")[1])){ chosenQuestion = message.content.split(" ")[1]; }
                 else{ message.reply(`Please enter a positive integer`); }
             }
-            
+
                 let avaliableQuestions = 0
                 for (var i = 0; i < data.questions.length; i++) {
                     if (data.questions[i].difficulty == reqDifficulty) {
@@ -91,7 +91,6 @@ client.on('message', message => {
                 message.channel.send(`Question ${chosenQuestion + 1}: ${data.questions[chosenQuestion].question}`)
             }
         }
-    }
 
     // Discord Command !solution
     else if (message.content.startsWith(`${prefix}solution`)) {
