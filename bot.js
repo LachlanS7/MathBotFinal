@@ -26,7 +26,7 @@ client.on('ready', () => {
                 i++;
             }
         } else {i = 0;}
-    }, 60000);
+    }, 30000);
 });
 
 // needs to be defined globally
