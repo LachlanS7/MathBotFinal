@@ -35,23 +35,18 @@ client.on('message', message => {
     // Discord Command !question.
     if (message.content.startsWith(`${prefix}question`)) {
         chosenQuestion = null; reqDifficulty = null; chosenQuestion = null
-        
+
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
             // Selecting difficulty
             if(message.content.split(" ")[2] != '' && message.content.split(" ")[1] == 'd'){
-                reqDifficulty = message.content.split(" ")[2];
+                if(!isNaN(message.client.split(" ")[2])){ reqDifficulty = message.client.split(" ")[2]; }    
+                else {message.reply(`Please enter a positive integer`); }    
+            }
+            if(message.content.split(" ")[2] == ''){
+                if(!isNaN(message.content.split(" ")[1])){ chosenQuestion = message.content.split(" ")[1]; }
+                else{ message.reply(`Please enter a positive integer`); }
             }
             
-            // Selecting question
-            else if(message.content.split(" ")[2] == ''  && isNaN(message.content.split(" ")[1])==false){
-                chosenQuestion = message.content.split(" ")[1];
-                message.channel.send(`test`)
-            }        
-
-            if (isNaN(reqDifficulty) == true || isNan(chosenQuestion)) {
-                message.reply(`Please enter a positive integer`);
-            } else {
-
                 let avaliableQuestions = 0
                 for (var i = 0; i < data.questions.length; i++) {
                     if (data.questions[i].difficulty == reqDifficulty) {
