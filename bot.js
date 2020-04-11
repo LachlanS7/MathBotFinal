@@ -122,8 +122,6 @@ client.on('message', message => {
         }
     }
 
-
-
     // Adding a question
     else if (message.content.startsWith(`${prefix}addquestion`)) {
         if (message.member.roles.find(r => r.name === adminRole)) {
@@ -161,6 +159,13 @@ client.on('message', message => {
         }
         else {
             message.reply("you need to be an admin for that...")
+        }
+    } else if(message.content.startsWith(`${prefix}notes`)){
+        if(message.content.split(" ").length==2){
+            for (var i = 0; i < data.notes.length; i++) {
+            if (data.notes[i].topic == message.content.split(" ")[1]) {message.author.send(`${data.notes[i].topic}: ${data.notes[i].image}`)}
+            if (i == data.notes.length - 1) {message.reply(`There are no notes on ${message.content.split(" ")[1]}`)}
+            }
         }
     }
 });
