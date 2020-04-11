@@ -53,11 +53,12 @@ client.on('message', message => {
 
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
             if(message.content.split(" ")[2] != '' && isNaN(message.content.split(" ")[2])){
-                chosenQuestion = parseInt(message.content.split(" ")[2]);
+                reqDifficulty = message.content.split(" ")[1];
             }
+            
             // Selecting difficulty
             else if(message.content.split(" ")[2] == ''){
-                reqDifficulty = message.content.split(" ")[1];
+                chosenQuestion = parseInt(message.content.split(" ")[2]);
             }        
 
             if (isNaN(reqDifficulty) == true) {
