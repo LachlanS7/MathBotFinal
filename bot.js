@@ -167,5 +167,14 @@ client.on('message', message => {
             if (i == data.notes.length - 1) {message.reply(`There are no notes on ${message.content.split(" ")[1]}`)}
             }
         }
+        else if(message.content.split(" ").length == 1) {
+            let notelist = ""
+            for (var i = 0; i < data.notes.length; i++) {
+                notelist += `${data.notes[i].topic},`
+            }
+            notelist -= `,`
+            message.reply(`There are notes on ${notelist}`)
+            
+        }
     }
 });
