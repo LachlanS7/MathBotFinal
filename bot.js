@@ -20,7 +20,7 @@ client.on('ready', () => {
     var i = 0;
 
     while(true){
-    if(time.getUTCHours()==5 && time.getUTCMinutes() == 37){ //that is 12:00, midday
+    if(time.getUTCHours()==5 && time.getUTCMinutes() == 38){ //that is 12:00, midday
         if (i == 0){
             client.channels.get('698306874986070046').send(`${time.getDate()+1}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
             i++;
