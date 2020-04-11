@@ -49,7 +49,7 @@ client.on('message', message => {
                     else (message.reply(`Question ${message.content.split(" ")[1]} does not exist`))}
                 else{ message.reply(`Please enter a positive integer`); }
             }
-            if(reqDifficulty != isNaN){
+            if(reqDifficulty != null){
                 let avaliableQuestions = 0
                 for (var i = 0; i < data.questions.length; i++) {
                     if (data.questions[i].difficulty == reqDifficulty) {
@@ -74,8 +74,7 @@ client.on('message', message => {
                     }
                 } else if (avaliableQuestions == 0) {message.reply(`There are no questions with difficulty ${reqDifficulty}`)}
             } 
-            }
-
+        }
         else {
             chosenQuestion = Math.floor(Math.random() * (data.questions.length - 1))
         }
