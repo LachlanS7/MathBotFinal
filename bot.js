@@ -19,6 +19,8 @@ client.on('ready', () => {
     time = new Date();
     var i = 0;
 
+    client.channels.get('698306874986070046').send(`${time.getUTCHours()}:${time.getUTCMinutes()}`);
+
     if(time.getUTCHours()==5 && time.getUTCMinutes() == 30){ //that is 12:00, midday
         if (i == 0){
             client.channels.get('698306874986070046').send(`${time.getDate()+1}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
