@@ -18,15 +18,10 @@ client.on('ready', () => {
     setInterval(() => {
         //Daily Questions
         time = new Date();
-        var i = 0;
-        
-        if(time.getHours() == 15 && time.getMinutes() == 42){ //that is 12:00, midday
-            if (i == 0){
-                client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
-                i++;
-            }
-        } else {i = 0;}
-    }, 30000);
+        if(time.getHours() == 12 && time.getMinutes() == 0){ //that is 12:00, midday
+            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
+        }
+    }, 60000);
 });
 
 // needs to be defined globally
