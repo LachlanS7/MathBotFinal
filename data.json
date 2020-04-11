@@ -195,6 +195,20 @@
             "image": "https://i.imgur.com/l1dk9y4.png",
             "solution": "Indeed",
             "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "test3",
+            "difficulty": "12",
+            "image": "https://i.imgur.com/l1dk9y4.png?1",
+            "solution": "",
+            "solutionAuthor": "Lachlan"
+        },
+        {
+            "question": "test3",
+            "difficulty": "12",
+            "image": "https://i.imgur.com/l1dk9y4.png",
+            "solution": "",
+            "solutionAuthor": "mitch"
         }
     ]
 }
