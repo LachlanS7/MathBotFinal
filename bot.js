@@ -6,6 +6,9 @@ const latex = require('node-latex')
 const fs = require('fs');
 const shell = require('shelljs'); // interact with the OS's shell
 
+let token = fs.readFileSync('token.txt');
+client.login(String(token).replace('\n', ''));
+
 function log(message) {
     client.channels.get('698417392526688296').send(message);
 }
@@ -26,9 +29,6 @@ chosenQuestion = null;
 temp = fs.readFileSync('data.json');
 let data = JSON.parse(temp);
 dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
-
-let token = fs.readFileSync('token.txt');
-client.login(String(token).replace('\n', ''));
 
 // Connecting to Discord
 client.on('ready', () => {
