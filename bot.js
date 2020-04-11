@@ -173,7 +173,7 @@ client.on('message', message => {
                 notelist += ` ${data.notes[i].topic},`
             }
             notelist = notelist.substring(1,notelist.length-1); notelist+=`.`
-            message.reply(`There are notes on ${notelist}`)  
+            message.reply(`There are notes on: ${notelist}`)  
         }
     }
 });
