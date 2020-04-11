@@ -25,16 +25,17 @@ process.on('uncaughtException', (err) => {
 // needs to be defined globally
 chosenQuestion = null;
 
-// Obtaning data from data.json
-temp = fs.readFileSync('data.json');
-let data = JSON.parse(temp);
-dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
+let data;
+let dailyQuestionNumber;
 
 // Connecting to Discord
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     log(`Logged in as ${client.user.tag}!`);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
+
+    data = JSON.parse(fs.readFileSync('data.json'))
+    dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
     setInterval(() => {
         //Daily Questions
