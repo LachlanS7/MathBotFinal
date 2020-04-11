@@ -14,19 +14,21 @@ let data = JSON.parse(temp);
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.channels.get(data.restartChannel).send('Hi again! I just restarted.');
+});
 
+setTimeout(() => {
     //Daily Questions
     time = new Date();
     var i = 0;
-       
-    if(time.getUTCHours()==5 && time.getUTCMinutes() == 38){ //that is 12:00, midday
+    
+    if(time.getUTCHours()==6 && time.getUTCMinutes() == 0){ //that is 12:00, midday
         if (i == 0){
             client.channels.get('698306874986070046').send(`${time.getDate()+1}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[0].question}`); 
             i++;
         }
     } else {i=0;}
-
-});
+    
+    console.log("minute");}, 60000)
 
 // needs to be defined globally
 chosenQuestion = null;
