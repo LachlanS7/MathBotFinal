@@ -48,7 +48,7 @@ client.on('message', message => {
                 message.channel.send(`test`)
             }        
 
-            if (isNaN(reqDifficulty) == true) {
+            if (isNaN(reqDifficulty) == true || isNan(chosenQuestion)) {
                 message.reply(`Please enter a positive integer`);
             } else {
 
