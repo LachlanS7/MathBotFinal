@@ -176,7 +176,7 @@ client.on('message', message => {
             message.reply(`There are notes on: ${notelist}`)  
         }
     } else if (message.content.startsWith(`${prefix}help`)){
-        message.author.send("Type !question to receive a random question, !question d a to receive a question of difficulty a, !question a to receive question a, !solution to receive the solution of the last sent question, !solution a to receive the solution to the question a, !notes to get notes on a certain topic.")
+        message.author.send("Type `!question` to receive a random question.\n `!question d a` to receive a question of difficulty a.\n `!question a` to receive question a.\n `!solution` to receive the solution of the last sent question.\n `!solution a` to receive the solution to question a.\n `!notes` to get notes on a certain topic.")
     }
     
 });
