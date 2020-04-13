@@ -23,7 +23,7 @@ client.on('ready', () => {
     setInterval(() => {
         //Daily Questions
         time = new Date();
-        if(time.getHours() == 13    ){ //that is 12:00, midday
+        if(time.getHours() == 13 && time.getMinutes() == 0){ //that is 12:00, midday
             if(data.dailyQuestions[data.dailyQuestionNumber] != null){
             client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[data.dailyQuestionNumber].question}`); 
             data.dailyQuestionNumber++;
