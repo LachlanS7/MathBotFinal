@@ -14,7 +14,6 @@ chosenQuestion = null;
 
 // Loading data
 let data = JSON.parse(fs.readFileSync('data.json'));
-let dailyQuestionNumber = parseInt(data.dailyQuestionNumber);
 
 // Connecting to Discord
 client.on('ready', () => {
@@ -24,9 +23,13 @@ client.on('ready', () => {
     setInterval(() => {
         //Daily Questions
         time = new Date();
-        if(time.getHours() == 12 && time.getMinutes()==0){ //that is 12:00, midday
-            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[dailyQuestionNumber].question}`); 
-            dailyQuestionNumber++;
+        if(time.getHours() == 13){ //that is 12:00, midday
+            if(data.dailyQuestions[data.dailyQuestionNumber].question != null){
+            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[data.dailyQuestionNumber].question}`); 
+            data.dailyQuestionNumber++;
+            } else {
+                client.channels.get('698306874986070046').send(`There is not a daily question for today!`)
+            }
         }
     }, 60000);
 });
@@ -150,7 +153,6 @@ client.on('message', message => {
         if (message.member.roles.find(r => r.name === adminRole)) {
             message.channel.send('Restarting and checking for updates...');
             data.restartChannel = message.channel.id;
-            data.dailyQuestionNumber = dailyQuestionNumber;
             fs.writeFileSync('data.json', JSON.stringify(data, null, 4));
             setTimeout(() => {
                 shell.exec('./update.sh'); 
