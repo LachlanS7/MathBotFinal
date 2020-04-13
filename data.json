@@ -1,6 +1,10 @@
 {
     "restartChannel": "698306874986070046",
+<<<<<<< HEAD
     "dailyQuestionNumber": 3,
+=======
+    "dailyQuestionNumber": 0,
+>>>>>>> ea0d4f424cb6c1f4efee09a164ff46c26a17c73b
     "notes": [
         {
             "topic": "trig",
