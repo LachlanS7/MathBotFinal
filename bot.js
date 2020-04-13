@@ -23,12 +23,13 @@ client.on('ready', () => {
     setInterval(() => {
         //Daily Questions
         time = new Date();
-        if(time.getHours() == 13 && time.getMinutes() == 0){ //that is 12:00, midday
-            if(data.dailyQuestions[data.dailyQuestionNumber] != null){
-            client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[data.dailyQuestionNumber].question}`); 
-            data.dailyQuestionNumber++;
+        if (time.getHours() == 12 && time.getMinutes() == 0) { //that is 12:00, midday
+            if (data.dailyQuestions[data.dailyQuestionNumber] != null) {
+                client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth() + 1}, Daily Question: ${data.dailyQuestions[data.dailyQuestionNumber].question}`);
+                data.dailyQuestionNumber++;
+                fs.writeFileSync('data.json', JSON.stringify(data, null, 4));
             } else {
-                client.channels.get('698306874986070046').send(`There is not a daily question for today!`)
+                client.channels.get('698306874986070046').send(`There is not a daily question for today!`);
             }
         }
     }, 60000);
@@ -41,18 +42,19 @@ client.on('message', message => {
 
         if (message.content.replace(`${prefix}question`, '').trim() != '') {
             // Selecting difficulty
-            if(message.content.split(" ").length = 3 && message.content.split(" ")[1] == 'd'){
-                if(!isNaN(message.content.split(" ")[2])){ reqDifficulty = message.content.split(" ")[2]; }    
-                else {message.reply(`Please enter a positive integer`); }    
+            if (message.content.split(" ").length = 3 && message.content.split(" ")[1] == 'd') {
+                if (!isNaN(message.content.split(" ")[2])) { reqDifficulty = message.content.split(" ")[2]; }
+                else { message.reply(`Please enter a positive integer`); }
             }
             // Selecting question
-            if(message.content.split(" ").length == 2){
-                if(!isNaN(message.content.split(" ")[1])){
-                    if(data.questions[message.content.split(" ")[1]] != null) {chosenQuestion = message.content.split(" ")[1]-1; }
-                    else (message.reply(`Question ${message.content.split(" ")[1]} does not exist`))}
-                else{ message.reply(`Please enter a positive integer`); }
+            if (message.content.split(" ").length == 2) {
+                if (!isNaN(message.content.split(" ")[1])) {
+                    if (data.questions[message.content.split(" ")[1]] != null) { chosenQuestion = message.content.split(" ")[1] - 1; }
+                    else (message.reply(`Question ${message.content.split(" ")[1]} does not exist`))
+                }
+                else { message.reply(`Please enter a positive integer`); }
             }
-            if(reqDifficulty != null){
+            if (reqDifficulty != null) {
                 let avaliableQuestions = 0
                 for (var i = 0; i < data.questions.length; i++) {
                     if (data.questions[i].difficulty == reqDifficulty) {
@@ -75,8 +77,8 @@ client.on('message', message => {
                             break;
                         }
                     }
-                } else if (avaliableQuestions == 0) {message.reply(`There are no questions with difficulty ${reqDifficulty}`)}
-            } 
+                } else if (avaliableQuestions == 0) { message.reply(`There are no questions with difficulty ${reqDifficulty}`) }
+            }
         }
         else {
             chosenQuestion = Math.floor(Math.random() * (data.questions.length - 1))
@@ -155,30 +157,30 @@ client.on('message', message => {
             data.restartChannel = message.channel.id;
             fs.writeFileSync('data.json', JSON.stringify(data, null, 4));
             setTimeout(() => {
-                shell.exec('./update.sh'); 
+                shell.exec('./update.sh');
                 message.channel.send('Failed to restart!');
-            }, 1000); 
+            }, 1000);
         }
         else {
             message.reply("you need to be an admin for that...")
         }
-    } else if(message.content.startsWith(`${prefix}notes`)){
-        if(message.content.split(" ").length==2){
+    } else if (message.content.startsWith(`${prefix}notes`)) {
+        if (message.content.split(" ").length == 2) {
             for (var i = 0, j = false; i < data.notes.length; i++) {
-            if (data.notes[i].topic == message.content.split(" ")[1]) {message.author.send(`${data.notes[i].topic} notes: ${data.notes[i].image}`); j = true;}
-            if (i == data.notes.length - 1 && !j) {message.reply(`There are no notes on ${message.content.split(" ")[1]}.`)}
+                if (data.notes[i].topic == message.content.split(" ")[1]) { message.author.send(`${data.notes[i].topic} notes: ${data.notes[i].image}`); j = true; }
+                if (i == data.notes.length - 1 && !j) { message.reply(`There are no notes on ${message.content.split(" ")[1]}.`) }
             }
         }
-        else if(message.content.split(" ").length == 1) {
+        else if (message.content.split(" ").length == 1) {
             let notelist = ``
             for (var i = 0; i < data.notes.length; i++) {
                 notelist += ` ${data.notes[i].topic},`
             }
-            notelist = notelist.substring(1,notelist.length-1); notelist+=`.`
-            message.reply(`There are notes on: ${notelist}`)  
+            notelist = notelist.substring(1, notelist.length - 1); notelist += `.`
+            message.reply(`There are notes on: ${notelist}`)
         }
-    } else if (message.content.startsWith(`${prefix}help`)){
+    } else if (message.content.startsWith(`${prefix}help`)) {
         message.author.send("Type `!question` to receive a random question.\n `!question d a` to receive a question of difficulty a.\n `!question a` to receive question a.\n `!solution` to receive the solution of the last sent question.\n `!solution a` to receive the solution to question a.\n `!notes` to get notes on a certain topic.")
     }
-    
+
 });
