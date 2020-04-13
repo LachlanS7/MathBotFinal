@@ -24,7 +24,7 @@ client.on('ready', () => {
         //Daily Questions
         time = new Date();
         if(time.getHours() == 12 && time.getMinutes()==0){ //that is 12:00, midday
-            if(data.dailyQuestions[dailyQuestionNumber].question != null){
+            if(data.dailyQuestions[data.dailyQuestionNumber].question != null){
             client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[data.dailyQuestionNumber].question}`); 
             data.dailyQuestionNumber++;
             } else {
