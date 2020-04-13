@@ -26,7 +26,7 @@ client.on('ready', () => {
         if(time.getHours() == 13    ){ //that is 12:00, midday
             if(data.dailyQuestions[data.dailyQuestionNumber].question != null){
             client.channels.get('698306874986070046').send(`${time.getDate()}/${time.getMonth()+1}, Daily Question: ${data.dailyQuestions[data.dailyQuestionNumber].question}`); 
-            data.dailyQuestionNumber+=1;
+            data.dailyQuestionNumber++;
             } else {
                 client.channels.get('698306874986070046').send(`There is not a daily question for today!`)
             }
