@@ -1,6 +1,6 @@
 {
     "restartChannel": "694490146128789545",
-    "dailyQuestionNumber": 3,
+    "dailyQuestionNumber": 1,
     "notes": [
         {
             "topic": "trig",
@@ -14,26 +14,27 @@
     "dailyQuestions": [
         {
             "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained.",
-            "difficulty": "5",
-            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638375100290170893/419779991308468224.png",
-            "solution": "e, 2.718...",
+        },
+        {
+            "question": "https://i.imgur.com/SlHzBg8.png",
+            "solution": "12.5m",
             "soltuionImage": false,
             "solutionAuthor": "Lachlan"
         },
         {
-            "question": "What is the limit of (1+1/x)^x as x approches infinity?",
-            "difficulty": "5",
-            "image": "https://cdn.discordapp.com/attachments/616197146374569987/638375100290170893/419779991308468224.png",
-            "solution": "e, 2.718...",
+            "question": "If a and b are real numbers such that a+b=1 and a^2+b^2=3, find the value of a^5+b^5",
+            "solution": "11",
             "soltuionImage": false,
             "solutionAuthor": "Lachlan"
         },
         {
-            "question": "Prove the derivative of sin(x)",
-            "difficulty": "5",
-            "solution": "cos(x)",
-            "soltuionImage": false,
-            "solutionAuthor": "Lachlan"
+            "question": "The radius of a cylinder is increasing at a rate of 1 meter per hour, and the height of the clinder is decreasing at a rate of 4 meters per hour. At a certain instant, the base radius is 5 meters and the height is 8 meters. What is the rate of change of the volume of the cylinder at the instant?"
+        },
+        {
+            "question": "Suppose that the minute hand of a clock is 15 mm long and the hour hand is 12 mm. How fast is the distance between the hour hand and the minute hand changing at 2 pm?"
+        },
+        {
+            "question": "During a recent census, a man told the census taker that he had three children. When asked their ages, he replied, 'The product of their ages is 72. The sum of their ages is the same as my house number.' The census taker ran to the door and looked at the house number. 'I still can't tell,' she complained.  The man replied, 'Oh that's right,  I forgot to tell you that the oldest one likes chocolate pudding.' The census taker promptly wrote down the ages of the 3 children.  How old are they?"
         }
     ],
     "questions": [
