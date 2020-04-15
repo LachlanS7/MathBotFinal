@@ -1,6 +1,6 @@
 {
     "restartChannel": "694490146128789545",
-    "dailyQuestionNumber": "1",
+    "dailyQuestionNumber": 1,
     "notes": [
         {
             "topic": "trig",
@@ -13,7 +13,7 @@
     ],
     "dailyQuestions": [
         {
-            "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained.",
+            "question": "Show that by adding one to the product of four consecutive integers, a perfect square is obtained."
         },
         {
             "question": "https://i.imgur.com/SlHzBg8.png",
