@@ -1,6 +1,6 @@
 {
     "restartChannel": "694490146128789545",
-    "dailyQuestionNumber": 1,
+    "dailyQuestionNumber": 2,
     "notes": [
         {
             "topic": "trig",
@@ -26,15 +26,6 @@
             "solution": "11",
             "soltuionImage": false,
             "solutionAuthor": "Lachlan"
-        },
-        {
-            "question": "The radius of a cylinder is increasing at a rate of 1 meter per hour, and the height of the cylinder is decreasing at a rate of 4 meters per hour. At a certain instant, the base radius is 5 meters and the height is 8 meters. What is the rate of change of the volume of the cylinder at the instant?"
-        },
-        {
-            "question": "Suppose that the minute hand of a clock is 15 mm long and the hour hand is 12 mm. How fast is the distance between the hour hand and the minute hand changing at 2 pm?"
-        },
-        {
-            "question": "During a recent census, a man told the census taker that he had three children. When asked their ages, he replied, 'The product of their ages is 72. The sum of their ages is the same as my house number.' The census taker ran to the door and looked at the house number. 'I still can't tell,' she complained.  The man replied, 'Oh that's right,  I forgot to tell you that the oldest one likes chocolate pudding.' The census taker promptly wrote down the ages of the 3 children.  How old are they?"
         }
     ],
     "questions": [
