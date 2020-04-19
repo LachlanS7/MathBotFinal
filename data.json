@@ -1,5 +1,5 @@
 {
-    "restartChannel": "694490146128789545",
+    "restartChannel": "698306874986070046",
     "dailyQuestionNumber": 2,
     "notes": [
         {
@@ -27,7 +27,7 @@
             "soltuionImage": false,
             "solutionAuthor": "Lachlan"
         },
-        {   
+        {
             "question": "The radius of a cylinder is increasing at a rate of 1 meter per hour, and the height of the cylinder is decreasing at a rate of 4 meters per hour. At a certain instant, the base radius is 5 meters and the height is 8 meters. What is the rate of change of the volume of the cylinder at the instant?"
         },
         {
