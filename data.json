@@ -79,7 +79,7 @@
         },
         {
             "question": "Evaluate the integral (t^3-1)/ln(t) dt from 0 to 1",
-            "difficulty": "9",
+            "difficulty": "10",
             "image": "https://cdn.discordapp.com/attachments/616197146374569987/638377709608763392/419779991308468224.png",
             "solution": "ln(4), https://cdn.discordapp.com/attachments/616197146374569987/638378035992854529/419779991308468224.png",
             "solutionAuthor": "Lachlan"
@@ -137,23 +137,11 @@
             "solutionAuthor": "Beano"
         },
         {
-            "question": "What is 1 + 1",
-            "difficulty": "1",
-            "solution": "-2e^(ipi)",
-            "solutionAuthor": "spooky asian"
-        },
-        {
             "question": "Solve this indefinite integral:",
             "difficulty": "6",
             "image": "https://cdn.discordapp.com/attachments/616175661790527519/638703541128790019/273638495640092672.png",
             "solution": "https://cdn.discordapp.com/attachments/616175661790527519/638704763940372480/273638495640092672.png",
             "solutionAuthor": "spooky asian"
-        },
-        {
-            "question": "what is 9 + 10",
-            "difficulty": "1",
-            "solution": "21",
-            "solutionAuthor": "mitch"
         },
         {
             "question": "Show that if z = r cis theta - r > 0 - then the distance between z and z-bar in the complex plane is 2r abs(sin theta).",
@@ -194,13 +182,6 @@
             "question": "Solve for all roots of the following polynomial by hand",
             "difficulty": "5",
             "image": "https://cdn.discordapp.com/attachments/624847086399258624/643354582407184384/unknown.png"
-        },
-        {
-            "question": "Was Euler a legend?",
-            "difficulty": "100",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg",
-            "solution": "Of course",
-            "solutionAuthor": "Lachlan"
         }
     ]
 }
